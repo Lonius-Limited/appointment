@@ -15,7 +15,7 @@ def bookAppointment(*args, **kwargs):
     slot = data['slot']
 
 
-    if len(frappe.db.get_list('Patient', {'email': data['email']})) < 1:
+    if len(frappe.db.get_all('Patient', {'email': data['email']})) < 1:
         frappe.local.response.update({   
                 'message': 'Failed to book patient', 
                 'status':'error', 
@@ -42,8 +42,8 @@ def createPatient(*args, **kwargs):
     data = kwargs #request data
 
     try:
-        # if len(frappe.db.get_list('Patient', {'email': data['email']})) > 0:
-            # frappe.local.response.update({'message': 'Failed to create patient', 'error': 'Patient already exists','status':'error'})
+        if len(frappe.db.get_all('Patient', {'email': data['email']})) > 0:
+            frappe.local.response.update({'message': 'Failed to create patient', 'error': 'Patient already exists','status':'error'})
 
         patient = frappe.get_doc({
             'doctype': "Patient", 'email': data['email'],
@@ -65,32 +65,34 @@ def createPatient(*args, **kwargs):
 def getAppointments(*args, **kwargs):
 
     data = kwargs
-    p = frappe.db.get_list('Patient', {'email': data['email']})
-    if len(_p) < 1:
-        frappe.local.response.update({'error': "A patient with that email doesn't exist", 'status':'error'})
+    # check for email parameter in url: ?email={patient_email}
+    if not 'email' in kwargs:frappe.local.response.update({'error': "A patient email hasn't been specified", 'status':'error'})
 
-    patient = frappe.get_doc('Patient', p[0]['name'])]
+    # check if the patient is registered
+    _p = frappe.db.get_all('Patient', {'email': data['email']})
+    if len(_p) < 1:frappe.local.response.update({'error': "A patient with that email doesn't exist", 'status':'error'})
 
-    # appointments = 
-    
+    patient = frappe.get_doc('Patient', _p[0]['name'])
 
-
-
-    frappe.local.response.update({'args': args, 'kw': kwargs})
-
+    appointments = frappe.get_all(
+        'Patient Appointment',
+        filters={'patient_name': patient.patient_name},
+        fields=['practitioner_name', 'duration', 'status', 'patient_name', 
+            'appointment_datetime', 'appointment_type', 'company'
+        ]
+    )
+    frappe.local.response.update({'appointments': appointments})
 
 
 @frappe.whitelist(allow_guest=True)
 def getAvailableSlots(*args, **kwargs):
 
-    # schedule = frappe.get_doc('Practitioner Schedule', 'Default Schedule')
-
-    slots = frappe.db.get_list(
+    # schedule = frappe.get_doc('Practitioner Schedule', 'Default Schedule
+    slots = frappe.db.get_all(
         'Healthcare Schedule Time Slot',
         fields=['day', 'name', 'from_time', 'to_time',],
         order_by='from_time desc', page_length=20
     )
-
     frappe.local.response.update({'availableSlots': slots})
 
 
