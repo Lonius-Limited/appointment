@@ -1,0 +1,22 @@
+{
+ "content": null,
+ "creation": "2021-03-31 23:23:09.270999",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2021-03-31 23:23:38.117444",
+ "modified_by": "Administrator",
+ "module": "Appointment",
+ "name": "get-slot",
+ "owner": "Administrator",
+ "page_name": "Get Slot",
+ "roles": [
+  {
+   "role": "Guest"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0
+}
