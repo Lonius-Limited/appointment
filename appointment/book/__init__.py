@@ -1,6 +1,6 @@
 import frappe
 import erpnext
-
+import json
 # frappe.logger("frappe.web").debug(kwargs)
 
 # practit
@@ -12,10 +12,14 @@ def bookAppointment(*args, **kwargs):
 
     data = kwargs
 
-    slot = data['slot']
+    _slot = data['slot']
+    slot = frappe.get_doc('Healthcare Schedule Time Slot', _slot)
+    frappe.local.response.update({'slot': json.loads(slot.as_json())})
+    return
+    
 
-
-    if len(frappe.db.get_all('Patient', {'email': data['email']})) < 1:
+    _p = frappe.db.get_all('Patient', {'email': data['patient']})
+    if len(_p) < 1:
         frappe.local.response.update({   
                 'message': 'Failed to book patient', 
                 'status':'error', 
@@ -23,16 +27,28 @@ def bookAppointment(*args, **kwargs):
         })
     
 
+    try:
+        appointment = frappe.get_doc({
+            'doctype':'Patient Appointment',
+            'patient': frappe.get_doc('Patient', _p[0]['name']),
+            'appointment_datetime':'' ,
+            # 'appointment_type':,
+            'company': frappe.get_doc('Company','Motire Occupational Safety and Health Solutions'),
+            'department': frappe.get_doc('Medical Department', 'General'),
+            'practitioner': frappe.get_doc('Practitioner', 'Dr. Motire')
+        })
+        appointment.run_method('set_missing_values')
+        appointment.insert(ignore_permissions=True, ignore_links=True, ignore_mandatory=True)
+        appointment.submit()
+        frappe.db.commit()
+        appointment.notify_update()
+        frappe.local.response.update({'message': 'appointment {} created successfully'.format(appointment.name), 'status':'success'})
 
-    # appointment = frappe.get_doc({
-    #     'doctype':'Patient Appointment',
-    #     'patient': 
-    # })
+    except Exception as e:
+        frappe.local.response.update({'message': 'Failed to create appointment', 'status':'error', 'error': str(e)})
 
 
 
-
-    # frappe.local.response.update(response)
 
 
 
@@ -77,7 +93,7 @@ def getAppointments(*args, **kwargs):
     appointments = frappe.get_all(
         'Patient Appointment',
         filters={'patient_name': patient.patient_name},
-        fields=['practitioner_name', 'duration', 'status', 'patient_name', 
+        fields=['practitioner_name', 'duration', 'status', 'name', 'patient_name', 
             'appointment_datetime', 'appointment_type', 'company'
         ]
     )
@@ -100,3 +116,12 @@ def getAvailableSlots(*args, **kwargs):
 @frappe.whitelist(allow_guest=True)
 def ping(*args, **kwargs):
     frappe.local.response.update({'ping':'pong'})
+
+
+def get_available_slots():
+    data = frappe.db.sql(
+
+    )
+    # data = frappe.db.sql()
+
+    pass
