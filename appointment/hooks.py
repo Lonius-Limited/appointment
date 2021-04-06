@@ -91,13 +91,17 @@ fixtures ="Workspace"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-#	}
-# }
+doc_events = {
+	# "*": {
+	# 	"on_update": "method",
+	# 	"on_cancel": "method",
+	# 	"on_trash": "method"
+	# }
+	"Lab Test": {
+		"before_save":"appointment.appointment.utils.lab_test_consumables.sync_template_consumables",
+		"before_submit": "appointment.appointment.utils.lab_test_consumables.post_lab_stock_transactions"
+	}
+}
 
 # Scheduled Tasks
 # ---------------
