@@ -1,0 +1,472 @@
+[
+ {
+  "county_name": "Siaya",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-03-31 17:45:39.267329",
+  "name": "Siaya",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Mombasa",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:16.871177",
+  "name": "Mombasa",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Kwale",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:16.958649",
+  "name": "Kwale",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Kilifi",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:17.059967",
+  "name": "Kilifi",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Tana River",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:17.122409",
+  "name": "Tana River",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Lamu",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:17.168668",
+  "name": "Lamu",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Taita Taveta",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:33:20.796572",
+  "name": "Taita Taveta",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Garissa",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:17.271382",
+  "name": "Garissa",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Wajir",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:17.319549",
+  "name": "Wajir",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Mandera",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:17.374176",
+  "name": "Mandera",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Marsabit",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:17.529635",
+  "name": "Marsabit",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Isiolo",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:17.580125",
+  "name": "Isiolo",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Meru",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:17.728907",
+  "name": "Meru",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Tharaka-Nithi",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:17.776050",
+  "name": "Tharaka-Nithi",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Embu",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:17.914886",
+  "name": "Embu",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Kitui",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:18.206851",
+  "name": "Kitui",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Machakos",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:18.401806",
+  "name": "Machakos",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Makueni",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:18.473161",
+  "name": "Makueni",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Nyandarua",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:18.683886",
+  "name": "Nyandarua",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Nyeri",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:18.737591",
+  "name": "Nyeri",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Kirinyaga",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:18.787798",
+  "name": "Kirinyaga",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Murang'a",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:31:00.205194",
+  "name": "Murang'a",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Kiambu",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:19.217808",
+  "name": "Kiambu",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Turkana",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:19.363124",
+  "name": "Turkana",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "West Pokot",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:19.413257",
+  "name": "West Pokot",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Samburu",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:19.459267",
+  "name": "Samburu",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Trans Nzoia",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:19.525299",
+  "name": "Trans Nzoia",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Uasin Gishu",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:19.941854",
+  "name": "Uasin Gishu",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Elgeyo Marakwet",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:20.011859",
+  "name": "Elgeyo Marakwet",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Nandi",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:20.072218",
+  "name": "Nandi",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Baringo",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:20.120903",
+  "name": "Baringo",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Laikipia",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:20.171538",
+  "name": "Laikipia",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Nakuru",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:20.223092",
+  "name": "Nakuru",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Narok",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:20.274154",
+  "name": "Narok",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Kajiado",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:20.427753",
+  "name": "Kajiado",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Kericho",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:20.639217",
+  "name": "Kericho",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Bomet",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:20.812757",
+  "name": "Bomet",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Kakamega",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:20.921461",
+  "name": "Kakamega",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Vihiga",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:21.065920",
+  "name": "Vihiga",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Bungoma",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:21.216934",
+  "name": "Bungoma",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Busia",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:21.408422",
+  "name": "Busia",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Kisumu",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:21.480595",
+  "name": "Kisumu",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Homa Bay",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:21.565485",
+  "name": "Homa Bay",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Migori",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:21.730055",
+  "name": "Migori",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Kisii",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:21.873226",
+  "name": "Kisii",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Nyamira",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:21.962242",
+  "name": "Nyamira",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "county_name": "Nairobi",
+  "docstatus": 0,
+  "doctype": "County",
+  "modified": "2021-04-05 17:26:22.022127",
+  "name": "Nairobi",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ }
+]
