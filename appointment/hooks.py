@@ -13,7 +13,7 @@ app_license = "MIT"
 
 # Includes in <head>
 # ------------------
-fixtures ="Workspace"
+fixtures =["Client Script"]
 # include js, css files in header of desk.html
 # app_include_css = "/assets/appointment/css/appointment.css"
 # app_include_js = "/assets/appointment/js/appointment.js"

@@ -1,0 +1,64 @@
+{
+ "actions": [],
+ "autoname": "field:sub_county_name",
+ "creation": "2021-03-31 15:47:54.814495",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sub_county_name",
+  "county_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "sub_county_name",
+   "fieldtype": "Data",
+   "label": "Sub County Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "county_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "County Name",
+   "options": "County",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-04-08 00:06:55.504772",
+ "modified_by": "Administrator",
+ "module": "Appointment",
+ "name": "Sub County",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Guest",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
