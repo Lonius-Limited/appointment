@@ -1,0 +1,680 @@
+{
+ "actions": [],
+ "autoname": "ENC-.######.",
+ "creation": "2021-07-06 15:07:47.177661",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "medical_general_section",
+  "patient",
+  "full_name",
+  "date_of_birth",
+  "age",
+  "gender",
+  "bp_diastolic",
+  "bp__systolic",
+  "pulse",
+  "attach_image_5",
+  "column_break_6",
+  "payer",
+  "national_id",
+  "email",
+  "mobile",
+  "employer",
+  "place_of_work",
+  "occupation",
+  "date_of_employment",
+  "years_of_service",
+  "audiometry_section",
+  "audiometry_measure",
+  "organic_dust_section",
+  "fvc_o",
+  "fev_o",
+  "pef_o",
+  "column_break_25",
+  "fev_fvc_ratio_o",
+  "skin_o",
+  "fossil_oil_section",
+  "welding_fumes_section",
+  "fvc_w",
+  "fev_w",
+  "pef_w",
+  "column_break_33",
+  "fev_fvc_ratio_w",
+  "skin_w",
+  "light_glare_section",
+  "visionright_eye",
+  "visionleft_eye",
+  "washing_chemicals_and_detergents_section",
+  "fvc_wc",
+  "fev_wc",
+  "pef_wc",
+  "column_break_42",
+  "fev_fvc_ratio_wc",
+  "skin_wc",
+  "extreme_vibration_section",
+  "lumbago",
+  "sciatica",
+  "straight_leg_test",
+  "neck_pain",
+  "column_break_49",
+  "rotator_cuff",
+  "tennis_elbow_and_golfers_elbow",
+  "de_quavain",
+  "carpel_turner_syndrome",
+  "adverse_temperatures_section",
+  "vision_r_adverse_temperature",
+  "vision_l_adverse_temperature",
+  "skin_at",
+  "chlorinewater_treatment_section",
+  "fvc_cw",
+  "fev_cw",
+  "pef_cw",
+  "column_break_64",
+  "fev_fvc_ratio_cw",
+  "skin_cw",
+  "manual_handling_section",
+  "lumbago_m",
+  "sciatica_m",
+  "straight_leg_test_m",
+  "neck_pain_m",
+  "section_break_72",
+  "rotator_cuff_m",
+  "tennis_elbow_and_golfers_elbow_m",
+  "de_quavain_m",
+  "carpel_turner_syndrome_m",
+  "organophospate_section",
+  "tiredness_and_weakness",
+  "dizziness_and_nausea",
+  "headache_and_blurred_vision",
+  "sweating",
+  "tearing",
+  "drooling",
+  "vomiting",
+  "tunnel_vision",
+  "column_break_86",
+  "twitching",
+  "abdominal_cramps",
+  "excess_urination",
+  "tremors",
+  "staggering_gait",
+  "pinpoint_pupils",
+  "hypotension",
+  "slow_heartbeat",
+  "breathing_difficulty"
+ ],
+ "fields": [
+  {
+   "fieldname": "medical_general_section",
+   "fieldtype": "Section Break",
+   "label": "MEDICAL GENERAL"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.image",
+   "fieldname": "attach_image_5",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Image"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "patient.customer",
+   "fieldname": "payer",
+   "fieldtype": "Link",
+   "label": "Payer/Institution",
+   "options": "Customer",
+   "read_only": 1
+  },
+  {
+   "fieldname": "national_id",
+   "fieldtype": "Data",
+   "label": "National ID"
+  },
+  {
+   "fetch_from": "patient.dob",
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth",
+   "read_only": 1
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fieldname": "bp_diastolic",
+   "fieldtype": "Data",
+   "label": "BP (Diastolic)"
+  },
+  {
+   "fieldname": "bp__systolic",
+   "fieldtype": "Data",
+   "label": "BP ( Systolic)"
+  },
+  {
+   "fieldname": "pulse",
+   "fieldtype": "Data",
+   "label": "Pulse"
+  },
+  {
+   "fetch_from": "patient.email",
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.mobile",
+   "fieldname": "mobile",
+   "fieldtype": "Data",
+   "label": "Mobile",
+   "read_only": 1
+  },
+  {
+   "fieldname": "occupation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Occupation",
+   "options": "Designation",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_of_employment",
+   "fieldtype": "Date",
+   "label": "Date of Employment"
+  },
+  {
+   "fieldname": "years_of_service",
+   "fieldtype": "Data",
+   "label": "Years of Service"
+  },
+  {
+   "description": "Enter number value in decibels for each corresponding frequency of sound.\nAdd a row for each measurement in the table below.",
+   "fieldname": "audiometry_section",
+   "fieldtype": "Section Break",
+   "label": "AUDIOMETRY"
+  },
+  {
+   "fieldname": "audiometry_measure",
+   "fieldtype": "Table",
+   "label": "Audiometry Measure",
+   "options": "OSHA Noise"
+  },
+  {
+   "fieldname": "organic_dust_section",
+   "fieldtype": "Section Break",
+   "label": "ORGANIC DUST"
+  },
+  {
+   "fieldname": "fvc_o",
+   "fieldtype": "Int",
+   "label": "FVC"
+  },
+  {
+   "depends_on": "eval:doc.fvc_o",
+   "fieldname": "fev_o",
+   "fieldtype": "Int",
+   "label": "FEV1"
+  },
+  {
+   "fieldname": "pef_o",
+   "fieldtype": "Int",
+   "label": "PEF"
+  },
+  {
+   "fieldname": "column_break_25",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fev_fvc_ratio_o",
+   "fieldtype": "Percent",
+   "label": "FEV1/FVC Ratio(%)",
+   "options": "fev_fvc_ratio",
+   "read_only": 1
+  },
+  {
+   "fieldname": "fossil_oil_section",
+   "fieldtype": "Section Break",
+   "label": "FOSSIL OIL"
+  },
+  {
+   "fieldname": "welding_fumes_section",
+   "fieldtype": "Section Break",
+   "label": "WELDING FUMES"
+  },
+  {
+   "fieldname": "fvc_w",
+   "fieldtype": "Int",
+   "label": "FVC"
+  },
+  {
+   "depends_on": "eval:doc.fvc_w",
+   "fieldname": "fev_w",
+   "fieldtype": "Int",
+   "label": "FEV1"
+  },
+  {
+   "fieldname": "pef_w",
+   "fieldtype": "Int",
+   "label": "PEF"
+  },
+  {
+   "fieldname": "fev_fvc_ratio_w",
+   "fieldtype": "Percent",
+   "label": "FEV1/FVC Ratio(%)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "light_glare_section",
+   "fieldtype": "Section Break",
+   "label": "LIGHT GLARE"
+  },
+  {
+   "fieldname": "visionright_eye",
+   "fieldtype": "Link",
+   "label": "Vision(Right Eye)",
+   "options": "OSHA Vision"
+  },
+  {
+   "fieldname": "visionleft_eye",
+   "fieldtype": "Link",
+   "label": "Vision(Left Eye)",
+   "options": "OSHA Vision"
+  },
+  {
+   "fieldname": "column_break_33",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "washing_chemicals_and_detergents_section",
+   "fieldtype": "Section Break",
+   "label": "WASHING CHEMICALS AND DETERGENTS"
+  },
+  {
+   "fieldname": "fvc_wc",
+   "fieldtype": "Int",
+   "label": "FVC"
+  },
+  {
+   "depends_on": "eval:doc.fvc_wc",
+   "fieldname": "fev_wc",
+   "fieldtype": "Int",
+   "label": "FEV1"
+  },
+  {
+   "fieldname": "pef_wc",
+   "fieldtype": "Int",
+   "label": "PEF"
+  },
+  {
+   "fieldname": "column_break_42",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fev_fvc_ratio_wc",
+   "fieldtype": "Float",
+   "label": "FEV1/FVC Ratio(%)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "extreme_vibration_section",
+   "fieldtype": "Section Break",
+   "label": "EXTREME VIBRATION"
+  },
+  {
+   "fieldname": "lumbago",
+   "fieldtype": "Select",
+   "label": "Lumbago",
+   "options": "\nPOSITIVE\nNEGATIVE"
+  },
+  {
+   "fieldname": "sciatica",
+   "fieldtype": "Select",
+   "label": "Sciatica",
+   "options": "\nPOSITIVE\nNEGATIVE"
+  },
+  {
+   "fieldname": "straight_leg_test",
+   "fieldtype": "Select",
+   "label": "Straight Leg Test",
+   "options": "\nPOSITIVE\nNEGATIVE"
+  },
+  {
+   "fieldname": "neck_pain",
+   "fieldtype": "Select",
+   "label": "Neck Pain",
+   "options": "\nPOSITIVE\nNEGATIVE"
+  },
+  {
+   "fieldname": "column_break_49",
+   "fieldtype": "Column Break",
+   "options": "\nPOSITIVE\nNEGATIVE"
+  },
+  {
+   "fieldname": "rotator_cuff",
+   "fieldtype": "Select",
+   "label": "Rotator Cuff",
+   "options": "\nPOSITIVE\nNEGATIVE"
+  },
+  {
+   "fieldname": "tennis_elbow_and_golfers_elbow",
+   "fieldtype": "Select",
+   "label": "Tennis Elbow and Golfers Elbow",
+   "options": "\nPOSITIVE\nNEGATIVE"
+  },
+  {
+   "fieldname": "de_quavain",
+   "fieldtype": "Select",
+   "label": "De Quavain",
+   "options": "\nPOSITIVE\nNEGATIVE"
+  },
+  {
+   "fieldname": "carpel_turner_syndrome",
+   "fieldtype": "Select",
+   "label": "Carpel Turner Syndrome",
+   "options": "\nPOSITIVE\nNEGATIVE"
+  },
+  {
+   "fieldname": "skin_o",
+   "fieldtype": "Text",
+   "label": "Skin"
+  },
+  {
+   "fieldname": "skin_w",
+   "fieldtype": "Text",
+   "label": "Skin "
+  },
+  {
+   "fieldname": "skin_wc",
+   "fieldtype": "Text",
+   "label": "Skin"
+  },
+  {
+   "fieldname": "adverse_temperatures_section",
+   "fieldtype": "Section Break",
+   "label": "ADVERSE TEMPERATURES"
+  },
+  {
+   "fieldname": "vision_r_adverse_temperature",
+   "fieldtype": "Link",
+   "label": "Vision(Right Eye)",
+   "options": "OSHA Vision"
+  },
+  {
+   "fieldname": "vision_l_adverse_temperature",
+   "fieldtype": "Link",
+   "label": "Vision(Left Eye)",
+   "options": "OSHA Vision"
+  },
+  {
+   "fieldname": "skin_at",
+   "fieldtype": "Text",
+   "label": "Skin"
+  },
+  {
+   "fieldname": "chlorinewater_treatment_section",
+   "fieldtype": "Section Break",
+   "label": "CHLORINE(WATER TREATMENT)"
+  },
+  {
+   "fieldname": "fvc_cw",
+   "fieldtype": "Int",
+   "label": "FVC"
+  },
+  {
+   "depends_on": "eval:doc.fvc_cw",
+   "fieldname": "fev_cw",
+   "fieldtype": "Int",
+   "label": "FEV1"
+  },
+  {
+   "fieldname": "pef_cw",
+   "fieldtype": "Int",
+   "label": "PEF"
+  },
+  {
+   "fieldname": "column_break_64",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fev_fvc_ratio_cw",
+   "fieldtype": "Data",
+   "label": "FEV1/FVC Ratio(%)"
+  },
+  {
+   "fieldname": "skin_cw",
+   "fieldtype": "Text",
+   "label": "Skin"
+  },
+  {
+   "fieldname": "manual_handling_section",
+   "fieldtype": "Section Break",
+   "label": "MANUAL HANDLING"
+  },
+  {
+   "fieldname": "lumbago_m",
+   "fieldtype": "Select",
+   "label": "Lumbago",
+   "options": "\nPOSITIVE\nNEGATIVE"
+  },
+  {
+   "fieldname": "sciatica_m",
+   "fieldtype": "Select",
+   "label": "Sciatica",
+   "options": "\nPOSITIVE\nNEGATIVE"
+  },
+  {
+   "fieldname": "straight_leg_test_m",
+   "fieldtype": "Select",
+   "label": "Straight Leg Test",
+   "options": "\nPOSITIVE\nNEGATIVE"
+  },
+  {
+   "fieldname": "neck_pain_m",
+   "fieldtype": "Select",
+   "label": "Neck Pain",
+   "options": "\nPOSITIVE\nNEGATIVE"
+  },
+  {
+   "fieldname": "section_break_72",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rotator_cuff_m",
+   "fieldtype": "Select",
+   "label": "Rotator Cuff",
+   "options": "\nPOSITIVE\nNEGATIVE"
+  },
+  {
+   "fieldname": "tennis_elbow_and_golfers_elbow_m",
+   "fieldtype": "Select",
+   "label": "Tennis Elbow and Golfers Elbow",
+   "options": "\nPOSITIVE\nNEGATIVE"
+  },
+  {
+   "fieldname": "de_quavain_m",
+   "fieldtype": "Select",
+   "label": "De Quavain",
+   "options": "\nPOSITIVE\nNEGATIVE"
+  },
+  {
+   "fieldname": "carpel_turner_syndrome_m",
+   "fieldtype": "Select",
+   "label": "Carpel Turner Syndrome",
+   "options": "\nPOSITIVE\nNEGATIVE"
+  },
+  {
+   "fieldname": "organophospate_section",
+   "fieldtype": "Section Break",
+   "label": "ORGANOPHOSPATE"
+  },
+  {
+   "fieldname": "tiredness_and_weakness",
+   "fieldtype": "Select",
+   "label": "Tiredness and Weakness",
+   "options": "\nPOSITIVE\nNEGATIVE"
+  },
+  {
+   "fieldname": "dizziness_and_nausea",
+   "fieldtype": "Select",
+   "label": "Dizziness and Nausea",
+   "options": "\nPOSITIVE\nNEGATIVE"
+  },
+  {
+   "fieldname": "headache_and_blurred_vision",
+   "fieldtype": "Select",
+   "label": "Headache and Blurred Vision",
+   "options": "\nPOSITIVE\nNEGATIVE"
+  },
+  {
+   "fieldname": "sweating",
+   "fieldtype": "Select",
+   "label": "Sweating",
+   "options": "\nPOSITIVE\nNEGATIVE"
+  },
+  {
+   "fieldname": "tearing",
+   "fieldtype": "Select",
+   "label": "Tearing",
+   "options": "\nPOSITIVE\nNEGATIVE"
+  },
+  {
+   "fieldname": "drooling",
+   "fieldtype": "Select",
+   "label": "Drooling",
+   "options": "\nPOSITIVE\nNEGATIVE"
+  },
+  {
+   "fieldname": "vomiting",
+   "fieldtype": "Select",
+   "label": "Vomiting",
+   "options": "\nPOSITIVE\nNEGATIVE"
+  },
+  {
+   "fieldname": "tunnel_vision",
+   "fieldtype": "Select",
+   "label": "Tunnel Vision",
+   "options": "\nPOSITIVE\nNEGATIVE"
+  },
+  {
+   "fieldname": "column_break_86",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "twitching",
+   "fieldtype": "Select",
+   "label": "Twitching",
+   "options": "\nPOSITIVE\nNEGATIVE"
+  },
+  {
+   "fieldname": "abdominal_cramps",
+   "fieldtype": "Select",
+   "label": "Abdominal Cramps",
+   "options": "\nPOSITIVE\nNEGATIVE"
+  },
+  {
+   "fieldname": "excess_urination",
+   "fieldtype": "Select",
+   "label": "Excess Urination",
+   "options": "\nPOSITIVE\nNEGATIVE"
+  },
+  {
+   "fieldname": "tremors",
+   "fieldtype": "Select",
+   "label": "Tremors",
+   "options": "\nPOSITIVE\nNEGATIVE"
+  },
+  {
+   "fieldname": "staggering_gait",
+   "fieldtype": "Select",
+   "label": "Staggering Gait",
+   "options": "\nPOSITIVE\nNEGATIVE"
+  },
+  {
+   "fieldname": "pinpoint_pupils",
+   "fieldtype": "Select",
+   "label": "Pinpoint Pupils",
+   "options": "\nPOSITIVE\nNEGATIVE"
+  },
+  {
+   "fieldname": "hypotension",
+   "fieldtype": "Select",
+   "label": "Hypotension",
+   "options": "\nPOSITIVE\nNEGATIVE"
+  },
+  {
+   "fieldname": "slow_heartbeat",
+   "fieldtype": "Select",
+   "label": "Slow Heartbeat",
+   "options": "\nPOSITIVE\nNEGATIVE"
+  },
+  {
+   "fieldname": "breathing_difficulty",
+   "fieldtype": "Select",
+   "label": "Breathing Difficulty",
+   "options": "\nPOSITIVE\nNEGATIVE"
+  },
+  {
+   "fieldname": "employer",
+   "fieldtype": "Data",
+   "label": "Employer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "place_of_work",
+   "fieldtype": "Link",
+   "label": "Place of Work",
+   "options": "Branch"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-07-08 17:29:22.612936",
+ "modified_by": "Administrator",
+ "module": "Appointment",
+ "name": "OSHA Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "full_name",
+ "track_changes": 1
+}
