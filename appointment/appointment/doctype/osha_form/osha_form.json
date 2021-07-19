@@ -12,9 +12,10 @@
   "date_of_birth",
   "age",
   "gender",
-  "bp_diastolic",
   "bp__systolic",
+  "bp_diastolic",
   "pulse",
+  "weight",
   "attach_image_5",
   "column_break_6",
   "payer",
@@ -22,11 +23,26 @@
   "email",
   "mobile",
   "employer",
+  "staff_id",
   "place_of_work",
   "occupation",
   "date_of_employment",
   "years_of_service",
+  "alcohol_and_gambling_screening_section",
+  "gambling",
+  "do_you_have_a_smartphone",
+  "do_you_gamble",
+  "gambling_anxious",
+  "gambling_hide",
+  "gambling_support",
+  "column_break_27",
+  "html_25",
+  "cage_cut",
+  "cage_annoy",
+  "cage_guilty",
+  "cage_eye_opener",
   "audiometry_section",
+  "populate_audiometry_values",
   "audiometry_measure",
   "organic_dust_section",
   "fvc_o",
@@ -152,7 +168,11 @@
   {
    "fieldname": "national_id",
    "fieldtype": "Data",
-   "label": "National ID"
+   "in_global_search": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "National ID",
+   "read_only": 1
   },
   {
    "fetch_from": "patient.dob",
@@ -214,7 +234,8 @@
    "label": "Years of Service"
   },
   {
-   "description": "Enter number value in decibels for each corresponding frequency of sound.\nAdd a row for each measurement in the table below.",
+   "collapsible": 1,
+   "description": "Enter number value in decibels for each corresponding frequency of sound.\nClick populate to set mandatory values for this audiometry in this test.",
    "fieldname": "audiometry_section",
    "fieldtype": "Section Break",
    "label": "AUDIOMETRY"
@@ -226,6 +247,7 @@
    "options": "OSHA Noise"
   },
   {
+   "collapsible": 1,
    "fieldname": "organic_dust_section",
    "fieldtype": "Section Break",
    "label": "ORGANIC DUST"
@@ -263,6 +285,7 @@
    "label": "FOSSIL OIL"
   },
   {
+   "collapsible": 1,
    "fieldname": "welding_fumes_section",
    "fieldtype": "Section Break",
    "label": "WELDING FUMES"
@@ -290,6 +313,7 @@
    "read_only": 1
   },
   {
+   "collapsible": 1,
    "fieldname": "light_glare_section",
    "fieldtype": "Section Break",
    "label": "LIGHT GLARE"
@@ -311,6 +335,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "collapsible": 1,
    "fieldname": "washing_chemicals_and_detergents_section",
    "fieldtype": "Section Break",
    "label": "WASHING CHEMICALS AND DETERGENTS"
@@ -342,6 +367,7 @@
    "read_only": 1
   },
   {
+   "collapsible": 1,
    "fieldname": "extreme_vibration_section",
    "fieldtype": "Section Break",
    "label": "EXTREME VIBRATION"
@@ -415,6 +441,7 @@
    "label": "Skin"
   },
   {
+   "collapsible": 1,
    "fieldname": "adverse_temperatures_section",
    "fieldtype": "Section Break",
    "label": "ADVERSE TEMPERATURES"
@@ -437,6 +464,7 @@
    "label": "Skin"
   },
   {
+   "collapsible": 1,
    "fieldname": "chlorinewater_treatment_section",
    "fieldtype": "Section Break",
    "label": "CHLORINE(WATER TREATMENT)"
@@ -472,6 +500,7 @@
    "label": "Skin"
   },
   {
+   "collapsible": 1,
    "fieldname": "manual_handling_section",
    "fieldtype": "Section Break",
    "label": "MANUAL HANDLING"
@@ -529,6 +558,7 @@
    "options": "\nPOSITIVE\nNEGATIVE"
   },
   {
+   "collapsible": 1,
    "fieldname": "organophospate_section",
    "fieldtype": "Section Break",
    "label": "ORGANOPHOSPATE"
@@ -641,20 +671,114 @@
   },
   {
    "fieldname": "employer",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "label": "Employer",
+   "options": "OSHA Employer",
    "reqd": 1
   },
   {
    "fieldname": "place_of_work",
    "fieldtype": "Link",
    "label": "Place of Work",
-   "options": "Branch"
+   "options": "Branch",
+   "reqd": 1
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Float",
+   "label": "Weight(KG)",
+   "non_negative": 1,
+   "precision": "2"
+  },
+  {
+   "fieldname": "staff_id",
+   "fieldtype": "Data",
+   "label": "Staff ID"
+  },
+  {
+   "fieldname": "populate_audiometry_values",
+   "fieldtype": "Button",
+   "label": "Populate Audiometry Values"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "alcohol_and_gambling_screening_section",
+   "fieldtype": "Section Break",
+   "label": "ALCOHOL AND GAMBLING SCREENING"
+  },
+  {
+   "fieldname": "gambling",
+   "fieldtype": "HTML",
+   "label": "Gambling",
+   "options": "<h5><b>Gambling Questionnaire</b></h5>"
+  },
+  {
+   "fieldname": "html_25",
+   "fieldtype": "HTML",
+   "options": "<h5><b>CAGE Questionnaire</b></h5>"
+  },
+  {
+   "fieldname": "column_break_27",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "cage_cut",
+   "fieldtype": "Check",
+   "label": "C. Have you ever felt you should Cut down on your drinking?"
+  },
+  {
+   "default": "0",
+   "fieldname": "cage_annoy",
+   "fieldtype": "Check",
+   "label": "A. Have people Annoyed you by criticizing your drinking?"
+  },
+  {
+   "default": "0",
+   "fieldname": "cage_guilty",
+   "fieldtype": "Check",
+   "label": "G. Have you ever felt bad or Guilty about your drinking?"
+  },
+  {
+   "default": "0",
+   "fieldname": "cage_eye_opener",
+   "fieldtype": "Check",
+   "label": "E. Have you ever had a drink first thing in the morning to steady your nerves or get rid of a hangover (Eye-opener)?"
+  },
+  {
+   "fieldname": "gambling_anxious",
+   "fieldtype": "Select",
+   "label": "DO YOU GET ANXIOUS WHEN YOU DON\u2019T GAMBLE?",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "gambling_hide",
+   "fieldtype": "Select",
+   "label": "DO YOU HIDE THE AMOUNT USED TOGAMBLE FROM PEOPLE WHO KNOW YOU?",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "gambling_support",
+   "fieldtype": "Select",
+   "label": "HAVE YOU RECEIVED SUPPORT WITH LIVING EXPENSES BECAUSE OF LOOSING MONEY BECAUSE OF GAMBLING?",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "do_you_have_a_smartphone",
+   "fieldtype": "Select",
+   "label": "DO YOU HAVE A SMARTPHONE?",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "do_you_gamble",
+   "fieldtype": "Select",
+   "label": "DO YOU GAMBLE?",
+   "options": "\nYES\nNO"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-07-08 17:29:22.612936",
+ "modified": "2021-07-19 09:34:52.600401",
  "modified_by": "Administrator",
  "module": "Appointment",
  "name": "OSHA Form",

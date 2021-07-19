@@ -6,28 +6,37 @@
  "engine": "InnoDB",
  "field_order": [
   "frequency",
-  "noise_level_db"
+  "left_ear_decibels",
+  "right_ear_decibels"
  ],
  "fields": [
   {
    "fieldname": "frequency",
-   "fieldtype": "Select",
+   "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Frequency",
-   "options": "\nL3000Hz\nL4000Hz\nR2000Hz\nR3000Hz\nR4000Hz"
+   "label": "Frequency"
   },
   {
-   "fieldname": "noise_level_db",
+   "bold": 1,
+   "fieldname": "left_ear_decibels",
    "fieldtype": "Int",
    "in_list_view": 1,
-   "label": "Noise Level (db)",
+   "label": "Left Ear (decibels)",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "right_ear_decibels",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Right Ear(decibels)",
    "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2021-07-08 15:52:22.425900",
+ "modified": "2021-07-15 10:58:24.538409",
  "modified_by": "Administrator",
  "module": "Appointment",
  "name": "OSHA Noise",
