@@ -1,0 +1,31 @@
+{
+ "actions": [],
+ "creation": "2021-07-06 15:07:54.923338",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "osha_instance"
+ ],
+ "fields": [
+  {
+   "fieldname": "osha_instance",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "OSHA Instance",
+   "options": "OSHA Form"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-07-06 15:08:43.410624",
+ "modified_by": "Administrator",
+ "module": "Appointment",
+ "name": "OSHA Instances",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
