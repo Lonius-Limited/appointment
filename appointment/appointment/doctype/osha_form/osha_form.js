@@ -10,7 +10,7 @@ frappe.ui.form.on('OSHA Form', {
 			})
 		}
 		// if (!frm.doc.audiometry_measure) {	
-		const frequencies = ["1000Hz", "2000Hz", "3000Hz", "4000Hz", "5000Hz", "6000Hz"]
+		const frequencies = [ "2000Hz", "3000Hz", "4000Hz"]
 		var missing_frequencies = frequencies.filter(value => !existing_values.includes(value))
 		missing_frequencies.forEach(value => {
 			var rowitem = frm.add_child("audiometry_measure");
