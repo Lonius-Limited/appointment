@@ -8,6 +8,7 @@
  "field_order": [
   "medical_general_section",
   "patient",
+  "time_of_encounter",
   "full_name",
   "date_of_birth",
   "age",
@@ -16,6 +17,7 @@
   "bp_diastolic",
   "pulse",
   "weight",
+  "random_blood_sugar",
   "attach_image_5",
   "column_break_6",
   "payer",
@@ -28,6 +30,9 @@
   "occupation",
   "date_of_employment",
   "years_of_service",
+  "warning_severe_low",
+  "warning_normal",
+  "warning_prediabetes",
   "alcohol_and_gambling_screening_section",
   "gambling",
   "do_you_have_a_smartphone",
@@ -130,7 +135,8 @@
    "fieldname": "patient",
    "fieldtype": "Link",
    "label": "Patient",
-   "options": "Patient"
+   "options": "Patient",
+   "reqd": 1
   },
   {
    "fetch_from": "patient.patient_name",
@@ -166,13 +172,15 @@
    "read_only": 1
   },
   {
+   "fetch_from": "patient.identification_number",
    "fieldname": "national_id",
    "fieldtype": "Data",
    "in_global_search": 1,
    "in_preview": 1,
    "in_standard_filter": 1,
    "label": "National ID",
-   "read_only": 1
+   "read_only": 1,
+   "reqd": 1
   },
   {
    "fetch_from": "patient.dob",
@@ -774,11 +782,45 @@
    "fieldtype": "Select",
    "label": "DO YOU GAMBLE?",
    "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "time_of_encounter",
+   "fieldtype": "Datetime",
+   "label": "Time of Encounter",
+   "read_only": 1
+  },
+  {
+   "default": "0.0",
+   "fieldname": "random_blood_sugar",
+   "fieldtype": "Float",
+   "label": "Random Blood Sugar(mmol/L)",
+   "non_negative": 1
+  },
+  {
+   "depends_on": "doc.random_blood_sugar < 3",
+   "fieldname": "warning_severe_low",
+   "fieldtype": "HTML",
+   "label": "Warning Severe Low",
+   "options": "<p class=\"alert alert-warning\">Severely Low</p>"
+  },
+  {
+   "depends_on": "doc.random_blood_sugar >=3 && doc.random_blood_sugar < 7",
+   "fieldname": "warning_normal",
+   "fieldtype": "HTML",
+   "label": "Warning Normal",
+   "options": "<p class=\"alert alert-success\">Normal Range</p>"
+  },
+  {
+   "depends_on": "doc.random_blood_sugar > 7",
+   "fieldname": "warning_prediabetes",
+   "fieldtype": "HTML",
+   "label": "Warning Prediabetes",
+   "options": "<p class=\"alert alert-danger\">High Blood Sugar</p>"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-07-19 09:34:52.600401",
+ "modified": "2021-08-04 09:12:22.973346",
  "modified_by": "Administrator",
  "module": "Appointment",
  "name": "OSHA Form",

@@ -5,4 +5,6 @@
 from frappe.model.document import Document
 
 class OSHAForm(Document):
-	pass
+	def before_save(self):
+		if self.time_of_encounter: return
+		self.time_of_encounter= self.creation

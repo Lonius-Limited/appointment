@@ -28,18 +28,24 @@ def send_lab_alert(docname):
     if phone:
         send_sms([phone], sms_msg)
     if email:
+        sender = frappe.get_value("Email Account",dict(default_outgoing=1),"email_id") or None
+        sender_str = None
+        if sender:
+            sender_str = "Motire Occupational Safety and Health Solutions  <{0}>".format(sender)
         send_notifications(
             [email],
             email_msg,
             "Lab Test Result {0}".format(doc.get("name")),
             doc.get("doctype"),
             doc.get("name"),
+            default_sender = sender_str
         )
-def send_notifications(email_list, message, subject, doctype, docname):
+def send_notifications(email_list, message, subject, doctype, docname, default_sender=None):
     # template_args = get_common_email_args(None)
     attachments = [frappe.attach_print(doctype, docname, file_name=docname)]
     email_args = {
         "recipients": email_list,
+        "sender": default_sender,
         "message": _(message),
         "subject": subject,
         "attachments": attachments or None,
