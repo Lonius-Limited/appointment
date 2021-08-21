@@ -1,0 +1,75 @@
+{
+ "actions": [],
+ "autoname": "field:facility",
+ "creation": "2021-08-21 10:21:19.098749",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "facility",
+  "testing_lab_id",
+  "address_and_contact_info"
+ ],
+ "fields": [
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "testing_lab_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Testing Lab ID",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "address_and_contact_info",
+   "fieldtype": "Text",
+   "label": "Address and Contact Info"
+  },
+  {
+   "fieldname": "facility",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Facility",
+   "reqd": 1,
+   "unique": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-08-21 11:00:07.390968",
+ "modified_by": "Administrator",
+ "module": "Appointment",
+ "name": "COVID 19 Testing Facilities",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Laboratory User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "facility,testing_lab_id",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "facility",
+ "track_changes": 1
+}
