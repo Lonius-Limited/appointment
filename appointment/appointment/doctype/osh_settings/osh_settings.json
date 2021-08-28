@@ -1,0 +1,70 @@
+{
+ "actions": [],
+ "creation": "2021-08-28 12:55:09.439431",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "nphl_api_logins_section",
+  "nphl_user_name",
+  "nphl_password",
+  "nphl_facility_name",
+  "nphl_facility_code",
+  "nphl_uri"
+ ],
+ "fields": [
+  {
+   "fieldname": "nphl_api_logins_section",
+   "fieldtype": "Section Break",
+   "label": "NPHL API Logins"
+  },
+  {
+   "fieldname": "nphl_user_name",
+   "fieldtype": "Data",
+   "label": "User Name"
+  },
+  {
+   "fieldname": "nphl_password",
+   "fieldtype": "Data",
+   "label": "Password"
+  },
+  {
+   "fieldname": "nphl_facility_name",
+   "fieldtype": "Data",
+   "label": "Facility Name"
+  },
+  {
+   "fieldname": "nphl_facility_code",
+   "fieldtype": "Data",
+   "label": "Facility Code"
+  },
+  {
+   "fieldname": "nphl_uri",
+   "fieldtype": "Data",
+   "label": "NPHL URI"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2021-08-28 15:31:59.778570",
+ "modified_by": "Administrator",
+ "module": "Appointment",
+ "name": "OSH Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
