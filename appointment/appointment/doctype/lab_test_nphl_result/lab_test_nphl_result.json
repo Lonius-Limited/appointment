@@ -1,0 +1,68 @@
+{
+ "actions": [],
+ "autoname": "NPHL",
+ "creation": "2021-08-28 14:45:10.322740",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "lab_test",
+  "result",
+  "is_success",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "lab_test",
+   "fieldtype": "Link",
+   "label": "Lab Test",
+   "options": "Lab Test"
+  },
+  {
+   "fieldname": "result",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "Result"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_success",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Success"
+  },
+  {
+   "default": "Sent",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nSent\nFailed"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-08-28 15:15:49.845522",
+ "modified_by": "Administrator",
+ "module": "Appointment",
+ "name": "Lab Test NPHL Result",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
