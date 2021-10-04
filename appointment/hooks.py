@@ -101,6 +101,9 @@ doc_events = {
 		"before_save":"appointment.appointment.utils.lab_test_consumables.sync_template_consumables",
 		"before_submit": "appointment.appointment.utils.lab_test_consumables.post_lab_stock_transactions",
 		"before_update_after_submit": "appointment.appointment.utils.lab_utils.lab_test_alert"
+	},
+	"Sales Invoice":{
+		"before_save":"appointment.api.utils.sales_invoice_on_save"
 	}
 }
 
