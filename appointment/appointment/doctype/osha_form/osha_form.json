@@ -30,6 +30,7 @@
   "occupation",
   "date_of_employment",
   "years_of_service",
+  "invoiced",
   "warning_severe_low",
   "warning_normal",
   "warning_prediabetes",
@@ -816,11 +817,18 @@
    "fieldtype": "HTML",
    "label": "Warning Prediabetes",
    "options": "<p class=\"alert alert-danger\">High Blood Sugar</p>"
+  },
+  {
+   "default": "0",
+   "fieldname": "invoiced",
+   "fieldtype": "Check",
+   "label": "Invoiced",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-08-04 09:12:22.973346",
+ "modified": "2021-09-15 14:59:34.926824",
  "modified_by": "Administrator",
  "module": "Appointment",
  "name": "OSHA Form",
