@@ -1,0 +1,15 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Patient",
+  "enabled": 1,
+  "modified": "2021-04-05 17:50:25.745326",
+  "name": "Patient-Form",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "script": "frappe.ui.form.on('Patient', {\n\trefresh(frm) {\n\t    if(frm.doc.county){\n\t        reload_subcounty(frm, frm.doc.county)\n\t    }\n\t\t// your code here\n\t},\n\tcounty:function(frm){\n\t    console.log('county')\n\t    reload_subcounty(frm, frm.doc.county)\n\t}\n})\nfunction reload_subcounty(frm, county_name){\n    frm.doc.sub_county = '';\n    refresh_field('sub_county')\n      frm.set_query(\"sub_county\", function() {\n        return {\n            \"filters\": {\n                \"county_name\": county_name,\n            }\n        };\n    });\n}",
+  "view": "Form"
+ }
+]

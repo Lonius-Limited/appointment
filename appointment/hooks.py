@@ -13,7 +13,7 @@ app_license = "MIT"
 
 # Includes in <head>
 # ------------------
-
+fixtures =["Client Script"]
 # include js, css files in header of desk.html
 # app_include_css = "/assets/appointment/css/appointment.css"
 # app_include_js = "/assets/appointment/js/appointment.js"
@@ -91,13 +91,21 @@ app_license = "MIT"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-#	}
-# }
+doc_events = {
+	# "*": {
+	# 	"on_update": "method",
+	# 	"on_cancel": "method",
+	# 	"on_trash": "method"
+	# }
+	"Lab Test": {
+		"before_save":"appointment.appointment.utils.lab_test_consumables.sync_template_consumables",
+		"before_submit": "appointment.appointment.utils.lab_test_consumables.post_lab_stock_transactions",
+		"before_update_after_submit": "appointment.appointment.utils.lab_utils.lab_test_alert"
+	},
+	"Sales Invoice":{
+		"before_save":"appointment.api.utils.sales_invoice_on_save"
+	}
+}
 
 # Scheduled Tasks
 # ---------------

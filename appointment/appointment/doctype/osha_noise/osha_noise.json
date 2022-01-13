@@ -1,0 +1,48 @@
+{
+ "actions": [],
+ "creation": "2021-07-08 13:38:40.741515",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "frequency",
+  "left_ear_decibels",
+  "right_ear_decibels"
+ ],
+ "fields": [
+  {
+   "fieldname": "frequency",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Frequency"
+  },
+  {
+   "bold": 1,
+   "fieldname": "left_ear_decibels",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Left Ear (decibels)",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "right_ear_decibels",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Right Ear(decibels)",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-07-15 10:58:24.538409",
+ "modified_by": "Administrator",
+ "module": "Appointment",
+ "name": "OSHA Noise",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
